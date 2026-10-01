@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery Eksen 11</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Gallery Eksen 11</div>
+      <nav>
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Gallery Eksen 11</h1>
+    <p>Kumpulan karya dari open submission dan kolaborasi antar UKM yang ditampilkan dalam pameran ini.</p>
+  </section>
+
+  <section id="tentang">
+    <div class="container">
+      <h2 class="section-title">Tentang Pameran</h2>
+      <p class="about-text">
+        Gallery Eksen 11 adalah ruang pameran yang menampilkan karya hasil open
+        submission dari peserta, serta karya kolaborasi antar unit kegiatan
+        mahasiswa. Setiap karya dipajang lengkap dengan informasi pembuat dan
+        status ketersediaannya.
+      </p>
+    </div>
+  </section>
+
+  <section id="galeri">
+    <div class="container">
+      <h2 class="section-title">Galeri Karya</h2>
+      <p class="section-subtitle">Pilih kategori untuk menyaring karya yang ditampilkan.</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-filter="all">Semua</button>
+        <button class="tab-btn" data-filter="submission">Submission</button>
+        <button class="tab-btn" data-filter="collab">Kolaborasi UKM</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="empty-msg" id="emptyMsg" style="display:none;">Belum ada karya untuk kategori ini.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Gallery Eksen 11.
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

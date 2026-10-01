@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Gallery Eksen 11</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">Gallery Eksen 11 - Admin</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Lihat Halaman Publik</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+
+      <div class="admin-panel">
+        <h2 id="formTitle">Tambah Karya</h2>
+
+        <div class="form-grid">
+          <div>
+            <label for="f-title">Judul Karya</label>
+            <input id="f-title" type="text" placeholder="Senja di Pelabuhan">
+          </div>
+
+          <div>
+            <label for="f-artist">Nama Pembuat</label>
+            <input id="f-artist" type="text" placeholder="Rani">
+          </div>
+
+          <div>
+            <label for="f-category">Kategori</label>
+            <select id="f-category">
+              <option value="submission">Submission</option>
+              <option value="collab">Kolaborasi UKM</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="f-price">Harga (0 kalau tidak dijual)</label>
+            <input id="f-price" type="number" placeholder="75000">
+          </div>
+
+          <div class="full">
+            <label for="f-desc">Deskripsi Singkat</label>
+            <textarea id="f-desc" placeholder="Suasana pelabuhan saat matahari terbenam."></textarea>
+          </div>
+
+          <div class="full">
+            <label for="f-image">Upload Gambar</label>
+            <input id="f-image" type="file" accept="image/*">
+            <div class="preview" id="f-preview"></div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" id="saveBtn">Simpan Karya</button>
+          <button class="btn secondary" id="cancelBtn" style="display:none;">Batal Edit</button>
+          <button class="btn secondary" id="exportBtn">Export Data</button>
+        </div>
+
+        <p class="admin-note">
+          Data di sini cuma tersimpan di browser ini. Supaya muncul juga di halaman
+          publik untuk semua orang, klik <b>Export Data</b>, lalu ganti isi file
+          <b>js/data.js</b> dengan isi file yang ter-download, baru push ke GitHub.
+        </p>
+      </div>
+
+      <h2 class="section-title">Daftar Karya</h2>
+      <div class="gallery-grid" id="galleryGrid"></div>
+      <p class="empty-msg" id="emptyMsg" style="display:none;">Belum ada karya, isi form di atas.</p>
+
+    </div>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
